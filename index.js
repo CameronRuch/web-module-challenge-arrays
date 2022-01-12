@@ -170,13 +170,13 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(originalFlavors, removedFlavors){
-  for (let i = 0; i < originalFlavors.length; i++) {
-    if (originalFlavors[i][0].includes(removedFlavors) === true || originalFlavors[i][1].includes(removedFlavors) === true) {
-      let filteredFlavor = [];
-      filteredFlavor.push(originalFlavors[i]);
+  let newArray = [];
+  for (let i = 0; i < originalFlavors.length; i++) {    
+    if (originalFlavors[i].includes(removedFlavors)) {
+            newArray.push(originalFlavors[i]);
     }
   }
-  return filteredFlavor;
+  return newArray;
 }
 
 
