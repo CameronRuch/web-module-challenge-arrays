@@ -85,8 +85,9 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(newFlavor){
- return originalFlavors.unshift(newFlavor);
+function addFlavor(originalFlavors,newFlavor){
+originalFlavors.unshift(newFlavor);
+return originalFlavors;
 }
 
 
@@ -102,7 +103,8 @@ Use the removeLastFlavor function below to do the following:
 */
 
 function removeLastFlavor(originalFlavors){
- return originalFlavors.pop();
+ originalFlavors.pop();
+ return originalFlavors;
 }
 
 
